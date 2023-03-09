@@ -9,6 +9,7 @@ object csvtos31 {
     
     val spark = SparkSession.builder.appName("WriteS3").getOrCreate()
   
+    //Fist change 
       
     //read csv with options
     val df = spark.read.options(Map("inferSchema"->"true","delimiter"->",","header"->"true")).csv("s3://huynqsecondbucket/input/testtrigger1/compressor_downtime_1467555_1.csv")
